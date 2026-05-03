@@ -1,0 +1,9 @@
+services:
+  isso:
+    image: ghcr.io/isso-comments/isso:release
+    volumes:
+      - ./isso.conf:/config/isso.conf
+      - ./data:/db
+    ports:
+      - "8080:8080"
+    restart: always
